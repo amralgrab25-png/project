@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberShield | خدمات الأمن السيبراني</title>
-    <!-- ربط ملف الـ CSS الخارجي حسب المسار المطلوب في التكليف -->
+    <title>CyberShield | الأمن السيبراني وحماية البيانات</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- الهيدر وشريط التنقل -->
+    <!-- القائمة العلوية وشريط التنقل -->
     <header>
         <div class="logo">
             <h2>🛡️ Cyber<span>Shield</span></h2>
@@ -17,100 +16,119 @@
         <nav>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#hero">الرئيسية</a></li>
-                <li><a href="#services">الخدمات</a></li>
-                <li><a href="#dashboard">لوحة التحكم</a></li>
+                <li><a href="#services">الخدمات الأمنية</a></li>
+                <li><a href="#dashboard">مركز المراقبة</a></li>
+                <li><a href="#about">من نحن</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
             </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </nav>
     </header>
 
     <main>
-        <!-- القسم الترحيبي -->
+        <!-- القسم الرئيسي (Hero Section) -->
         <section id="hero" class="hero-section">
             <div class="hero-content">
-                <h1>حماية بياناتك هي <span>أولويتنا القصوى</span></h1>
-                <p>نقدم حلولاً برمجية وأمنية متكاملة لتقييم الثغرات وحماية الشبكات بأحدث المعايير العالمية.</p>
-                <a href="#contact" class="btn-primary">اطلب استشارة أمنية</a>
+                <h1>حماية البنية التحتية الرقمية <span>أولويتنا</span></h1>
+                <p>نقدم استشارات أمنية متقدمة، واختبارات اختراق متكاملة، وأنظمة مراقبة لحماية بيانات منشأتك من التهديدات السيبرانية المتطورة.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">اطلب استشارة فورية</a>
+                    <a href="#services" class="btn-secondary">استكشف خدماتنا</a>
+                </div>
             </div>
         </section>
 
-        <!-- قسم الخدمات -->
+        <!-- قسم الخدمات الأمنية (Services Section) -->
         <section id="services" class="services-section">
-            <h2 class="section-title">خدماتنا التقنية</h2>
+            <h2 class="section-title">خدماتنا المتقدمة</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="icon">🔍</div>
-                    <h3>اختبار الاختراق</h3>
-                    <p>فحص المواقع واكتشاف الثغرات الأمنية قبل استغلالها.</p>
+                    <h3>اختبار الاختراق والتقييم</h3>
+                    <p>محاكاة الهجمات السيبرانية الواقعية للكشف عن الثغرات الأمنية في الأنظمة والتطبيقات قبل استغلالها من المخترقين.</p>
                 </div>
                 <div class="service-card">
-                    <div class="icon">🌐</div>
-                    <h3>أمن الشبكات</h3>
-                    <p>إعداد جدران الحماية ومراقبة البيانات لمنع أي تسلل.</p>
+                    <div class="icon">🛡️</div>
+                    <h3>أمن الشبكات والخوادم</h3>
+                    <p>بناء جدران الحماية القوية، وتأمين السيرفرات، وإعداد أنظمة كشف ومنع التسلل الخارجي (IDS/IPS).</p>
                 </div>
                 <div class="service-card">
-                    <div class="icon">💻</div>
-                    <h3>الاستجابة للحوادث</h3>
-                    <p>تحليل الهجمات الرقمية والتعافي منها وتقليل الأضرار.</p>
+                    <div class="icon">📊</div>
+                    <h3>التحقيق الجنائي الرقمي</h3>
+                    <p>تحليل الحوادث الأمنية بعد وقوعها، وتتبع الأدلة الرقمية، وتقديم تقارير فنية دقيقة لتقليل الأضرار المستقبيلة.</p>
                 </div>
             </div>
         </section>
 
-        <!-- قسم لوحة التحكم (Dashboard) -->
+        <!-- قسم لوحة التحكم التفاعلية (Dashboard Section) -->
         <section id="dashboard" class="dashboard-section">
-            <h2 class="section-title">مركز مراقبة التهديدات (مباشر)</h2>
+            <h2 class="section-title">مركز مراقبة التهديدات المباشر</h2>
+            <p class="section-subtitle">إحصائيات حية تعكس كفاءة أنظمة الصد الذكي</p>
             <div class="dashboard-container">
                 <div class="stat-card">
-                    <h4>استقرار النظام</h4>
-                    <p class="stat-value">99.9%</p>
+                    <h4>استقرار الأنظمة والخوادم</h4>
+                    <p class="stat-value text-secure">99.98%</p>
                 </div>
                 <div class="stat-card">
-                    <h4>تهديدات تم صدها</h4>
-                    <p class="stat-value" id="threatCount">1,240</p>
+                    <h4>هجمات تم رصدها وإحباطها</h4>
+                    <p class="stat-value text-danger" id="threatCount">4,520</p>
                 </div>
                 <div class="stat-card">
-                    <h4>حالة السيرفر</h4>
-                    <p class="stat-value secure">آمن ✔</p>
+                    <h4>مستوى الحماية العام</h4>
+                    <p class="stat-value text-primary">ممتاز ✔</p>
                 </div>
             </div>
         </section>
 
-        <!-- قسم اتصل بنا (Form) -->
+        <!-- قسم من نحن (About Section) -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2 class="section-title-alt">من نحن؟</h2>
+                    <p>نحن فريق من المهندسين الاستشاريين المتخصصين في مجالات الأمن السيبراني وتقنية المعلومات. نهدف إلى نشر الوعي الأمني وتقديم حلول دفاعية وهجومية متكاملة لحماية المؤسسات والشركات في البيئات الافتراضية والفيزيائية.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم اتصل بنا ونموذج التحقق (Contact Section) -->
         <section id="contact" class="contact-section">
-            <h2 class="section-title">تواصل معنا الآن</h2>
-            <div class="form-container">
-                <form id="secureForm" novalidate>
-                    <div class="form-group">
-                        <label for="username">الاسم الكريم:</label>
-                        <input type="text" id="username" placeholder="أدخل اسمك الكامل">
-                        <span class="error-msg" id="nameError"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">البريد الإلكتروني:</label>
-                        <input type="email" id="email" placeholder="name@example.com">
-                        <span class="error-msg" id="emailError"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">تفاصيل الطلب:</label>
-                        <textarea id="message" rows="4" placeholder="اكتب رسالتك هنا..."></textarea>
-                        <span class="error-msg" id="messageError"></span>
-                    </div>
-                    <button type="submit" class="btn-submit">إرسال الطلب بأمان</button>
-                </form>
+            <h2 class="section-title">تواصل معنا بأمان</h2>
+            <div class="contact-grid">
+                <div class="form-container">
+                    <form action="https://formbold.com/s/3dJkx" method="POST" id="secureForm">
+                        <div class="form-group">
+                            <label for="username">الاسم بالكامل:</label>
+                           <input type="text" id="username" name="name" placeholder="أدخل اسمك الكريم">
+                            <span class="error-msg" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني:</label>
+                           <input type="email" id="email" name="email" placeholder="name@example.com">
+                            <span class="error-msg" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">تفاصيل الاستشارة المطلوبة:</label>
+                           <textarea id="message" name="message" rows="4" placeholder="اكتب تفاصيل طلبك هنا..."></textarea>
+                            <span class="error-msg" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn-submit">إرسال الطلب المشفر</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- التذييل والروابط الاجتماعية -->
     <footer>
-        <p>&copy; 2026 CyberShield. جميع الحقوق محفوظة لمهندسي المشروع.</p>
+        <div class="footer-content">
+            <p>&copy; 2026 CyberShield.  جميع الحقوق محفوظة لمهندس المشروع عمرو الصانع.</p>
+            <div class="social-links">
+                <a href="https://github.com/amralgrab25-png" target="_blank">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- ربط كود الجافاسكربت حسب الهيكل المطلوب -->
     <script src="js/main.js"></script>
 </body>
 </html>

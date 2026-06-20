@@ -314,34 +314,45 @@ footer {
 .social-links a:hover {
     color: var(--accent-color);
 }
-/* تحسين تجاوب شريط التنقل للهواتف */
+/* تحسين شريط التنقل للهواتف - تصميم أفقي متناسق */
 @media (max-width: 768px) {
-    /* تجعل الشعار والقائمة يترتبان عمودياً بدلاً من أفقياً */
+    /* ضبط الحاوية الرئيسية لتظل أفقية مع توزيع العناصر */
     .navbar-container, 
     nav, 
     header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 10px;
-        text-align: center;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px 15px !important;
+        flex-wrap: nowrap !important;
     }
 
-    /* ترتيب الروابط بشكل مرن ومناسب للمس المباشر بالإصبع */
+    /* تصغير حجم الشعار والأيقونة ليناسب المساحة الضيقة */
+    .logo, .brand, header h1, header h2 {
+        font-size: 18px !important;
+        margin: 0 !important;
+        white-space: nowrap;
+    }
+
+    /* ضبط قائمة الروابط لتصبح شريطاً أفقياً مرناً وصغيراً */
     .nav-links, 
     nav ul, 
     .menu {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        padding: 0;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 6px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
     }
 
-    /* تصغير حجم خط الروابط قليلاً لتناسب عرض شاشة الهاتف */
+    /* تصغير حجم نصوص الروابط وحوافها لتصطف بجانب بعضها بسلاسة */
     .nav-links a, 
-    nav ul li a {
-        font-size: 14px;
-        padding: 6px 10px;
-        display: inline-block;
+    nav ul li a, 
+    .menu li a {
+        font-size: 11px !important;
+        padding: 4px 6px !important;
+        white-space: nowrap; /* يمنع النص من الانقسام لسطرين */
     }
 }

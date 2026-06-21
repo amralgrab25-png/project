@@ -1,4 +1,6 @@
-/* تصغير الهوامش وتوحيد الخطوط */
+/* ==========================================================================
+   1. تصغير الهوامش وتوحيد الخطوط والقيم الأساسية
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +26,9 @@ body {
     line-height: 1.6;
 }
 
-/* شريط الهيدر */
+/* ==========================================================================
+   2. شريط الهيدر والتنقل (للشاشات الكبيرة)
+   ========================================================================== */
 header {
     display: flex;
     justify-content: space-between;
@@ -62,7 +66,9 @@ header {
     color: var(--accent-color);
 }
 
-/* الأقسام العامة */
+/* ==========================================================================
+   3. الأقسام العامة في الموقع
+   ========================================================================== */
 section {
     padding: 80px 8%;
 }
@@ -89,7 +95,9 @@ section {
     margin-bottom: 50px;
 }
 
-/* قسم الـ Hero */
+/* ==========================================================================
+   4. قسم الـ Hero (الواجهة الرئيسية)
+   ========================================================================== */
 .hero-section {
     min-height: 75vh;
     display: flex;
@@ -148,7 +156,9 @@ section {
     background-color: var(--border-color);
 }
 
-/* شبكة الخدمات */
+/* ==========================================================================
+   5. شبكة الخدمات
+   ========================================================================== */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -184,7 +194,9 @@ section {
     font-size: 0.95rem;
 }
 
-/* لوحة التحكم (Dashboard) */
+/* ==========================================================================
+   6. لوحة التحكم (Dashboard)
+   ========================================================================== */
 .dashboard-container {
     display: flex;
     justify-content: space-around;
@@ -212,7 +224,9 @@ section {
 .text-danger { color: var(--accent-danger); }
 .text-primary { color: #3b82f6; }
 
-/* قسم من نحن */
+/* ==========================================================================
+   7. قسم من نحن
+   ========================================================================== */
 .about-section {
     background-color: #0f172a;
     text-align: center;
@@ -228,7 +242,9 @@ section {
     margin-bottom: 20px;
 }
 
-/* قسم الاتصال والنماذج */
+/* ==========================================================================
+   8. قسم الاتصال والنماذج
+   ========================================================================== */
 .form-container {
     max-width: 650px;
     margin: 0 auto;
@@ -288,7 +304,9 @@ section {
     background-color: #059669;
 }
 
-/* التذييل */
+/* ==========================================================================
+   9. التذييل (Footer)
+   ========================================================================== */
 footer {
     background-color: var(--bg-card);
     padding: 30px 8%;
@@ -314,45 +332,72 @@ footer {
 .social-links a:hover {
     color: var(--accent-color);
 }
-/* تحسين شريط التنقل للهواتف - تصميم أفقي متناسق */
+
+/* ==========================================================================
+   10. التجاوب الاحترافي الكامل للشاشات والهواتف الذكية (Responsive Design)
+   ========================================================================== */
 @media (max-width: 768px) {
-    /* ضبط الحاوية الرئيسية لتظل أفقية مع توزيع العناصر */
-    .navbar-container, 
-    nav, 
+    /* ضبط الهيدر لترتيب الشعار وتحته القائمة بشكل عمودي متناسق */
     header {
         display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        padding: 15px 5% !important;
         align-items: center !important;
-        padding: 10px 15px !important;
-        flex-wrap: nowrap !important;
     }
 
-    /* تصغير حجم الشعار والأيقونة ليناسب المساحة الضيقة */
-    .logo, .brand, header h1, header h2 {
-        font-size: 18px !important;
-        margin: 0 !important;
-        white-space: nowrap;
+    /* تصغير حجم خط الشعار ليناسب الهواتف */
+    .logo h2 {
+        font-size: 1.3rem !important;
     }
 
-    /* ضبط قائمة الروابط لتصبح شريطاً أفقياً مرناً وصغيراً */
-    .nav-links, 
-    nav ul, 
-    .menu {
+    /* إجبار القائمة والروابط على الاصطفاف أفقياً في سطر واحد منظم وبدون تداخل */
+    .nav-links {
         display: flex !important;
         flex-direction: row !important;
-        gap: 6px !important;
-        margin: 0 !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 4px !important;
         padding: 0 !important;
-        list-style: none !important;
+        margin: 0 !important;
+        width: 100% !important;
     }
 
-    /* تصغير حجم نصوص الروابط وحوافها لتصطف بجانب بعضها بسلاسة */
-    .nav-links a, 
-    nav ul li a, 
-    .menu li a {
-        font-size: 11px !important;
+    .nav-links li {
+        margin: 0 !important;
+    }
+
+    /* تحسين خطوط الروابط والمساحات المحيطة بها لعدم انقسام النص */
+    .nav-links li a {
+        font-size: 12px !important;
+        margin: 0 4px !important;
         padding: 4px 6px !important;
-        white-space: nowrap; /* يمنع النص من الانقسام لسطرين */
+        white-space: nowrap !important; /* يمنع انقسام العناوين لسطرين */
+    }
+
+    /* تصغير العناوين الضخمة والمزعجة في الواجهة الرئيسية (Hero Section) */
+    .hero-section {
+        padding: 40px 5% !important;
+        min-height: 60vh !important;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem !important; /* الحجم الاحترافي لعناوين الهواتف */
+        line-height: 1.4 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem !important;
+        padding: 0 10px !important;
+    }
+    
+    /* تصغير حواف الأقسام الأخرى لعدم إهدار مساحة الشاشة */
+    section {
+        padding: 40px 5% !important;
+    }
+    
+    .section-title {
+        font-size: 1.6rem !important;
     }
 }

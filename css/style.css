@@ -305,28 +305,46 @@ section {
 }
 
 /* ==========================================================================
-   9. التذييل (Footer)
+   9. التذييل الأساسي (Footer) لشاشات الكمبيوتر
    ========================================================================== */
 footer {
     background-color: var(--bg-card);
-    padding: 30px 8%;
+    padding: 40px 8%;
     border-top: 1px solid var(--border-color);
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    text-align: center;
+    gap: 15px;
     color: var(--text-muted);
 }
 
+.footer-logo {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
 .social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* يحافظ على دمج الأيقونة مع اسم المنصة */
     color: var(--text-muted);
     text-decoration: none;
-    margin-right: 20px;
+    font-size: 16px;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .social-links a:hover {
@@ -375,14 +393,14 @@ footer {
         white-space: nowrap !important; /* يمنع انقسام العناوين لسطرين */
     }
 
-    /* تصغير العناوين الضخمة والمزعجة في الواجهة الرئيسية (Hero Section) */
+    /* تصغير الواجهة الرئيسية (Hero Section) للموبايل */
     .hero-section {
         padding: 40px 5% !important;
         min-height: 60vh !important;
     }
 
     .hero-content h1 {
-        font-size: 1.8rem !important; /* الحجم الاحترافي لعناوين الهواتف */
+        font-size: 1.8rem !important; 
         line-height: 1.4 !important;
         margin-bottom: 15px !important;
     }
@@ -391,7 +409,32 @@ footer {
         font-size: 0.95rem !important;
         padding: 0 10px !important;
     }
+
+    /* جعل الأزرار مرنة تحت بعضها لسهولة النقر من الهاتف */
+    .hero-buttons {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    .hero-buttons a {
+        width: 100% !important;
+        text-align: center !important;
+    }
     
+    /* تحويل شبكات العرض لتناسب أبعاد شاشة الهاتف */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .dashboard-container {
+        flex-direction: column !important;
+    }
+
+    .stat-card {
+        width: 100% !important;
+    }
+
     /* تصغير حواف الأقسام الأخرى لعدم إهدار مساحة الشاشة */
     section {
         padding: 40px 5% !important;
@@ -399,5 +442,23 @@ footer {
     
     .section-title {
         font-size: 1.6rem !important;
+    }
+
+    .form-container {
+        padding: 20px !important;
+    }
+
+    /* --- ضبط الـ Footer التفاعلي على الهاتف لمنع انفصال الكلمات والأيقونات --- */
+    .footer-logo {
+        max-width: 150px !important; /* تصغير متناسق لحجم الشعار في الجوال */
+    }
+
+    .social-links {
+        flex-wrap: wrap !important; /* السماح بالالتفاف بسلاسة إن لزم الأمر */
+        gap: 15px !important;
+    }
+
+    .social-links a {
+        font-size: 14px !important;
     }
 }

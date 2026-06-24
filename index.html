@@ -5,35 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberShield | الأمن السيبراني وحماية البيانات</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- إضافة مكتبة Font Awesome للأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* تنسيق بسيط مضاف للتأكد من ظهور الشعار بشكل متناسق في التذييل */
-        .footer-logo {
-            max-width: 150px;
-            height: auto;
-            margin-bottom: 10px;
-            display: block;
+        /* تنسيقات إضافية مخصصة للتذييل لضمان التناسق وعدم انفصال الأيقونات */
+        footer {
+            background-color: #0f172a; /* لون داكن يتناسب مع الهوية الرقمية للموقع */
+            padding: 4px 20px 30px 20px;
+            color: #ffffff;
         }
         .footer-content {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            gap: 15px;
+        }
+        .footer-logo {
+            max-width: 200px; /* حجم مناسب لظهور شعار اتقان سوفت */
+            height: auto;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px; /* مسافة متناسقة بين الأزرار */
+            margin-top: 10px;
         }
         .social-links a {
-            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px; /* تمنع انفصال الأيقونة عن النص وتجعلهما بجانب بعضهما تماماً */
             text-decoration: none;
             color: inherit;
+            font-size: 16px;
+            transition: color 0.3s ease;
         }
-        .social-links i {
-            margin-left: 5px;
+        .social-links a:hover {
+            color: #38bdf8; /* تأثير جمالي عند تمرير الماوس */
         }
     </style>
 </head>
 <body>
 
-    <!-- القائمة العلوية وشريط التنقل -->
     <header>
         <div class="logo">
             <h2>🛡️ Cyber<span>Shield</span></h2>
@@ -50,7 +66,6 @@
     </header>
 
     <main>
-        <!-- القسم الرئيسي (Hero Section) -->
         <section id="hero" class="hero-section">
             <div class="hero-content">
                 <h1>حماية البنية التحتية الرقمية <span>أولويتنا</span></h1>
@@ -62,7 +77,6 @@
             </div>
         </section>
 
-        <!-- قسم الخدمات الأمنية (Services Section) -->
         <section id="services" class="services-section">
             <h2 class="section-title">خدماتنا المتقدمة</h2>
             <div class="services-grid">
@@ -84,7 +98,6 @@
             </div>
         </section>
 
-        <!-- قسم لوحة التحكم التفاعلية (Dashboard Section) -->
         <section id="dashboard" class="dashboard-section">
             <h2 class="section-title">مركز مراقبة التهديدات المباشر</h2>
             <p class="section-subtitle">إحصائيات حية تعكس كفاءة أنظمة الصد الذكي</p>
@@ -104,7 +117,6 @@
             </div>
         </section>
 
-        <!-- قسم من نحن (About Section) -->
         <section id="about" class="about-section">
             <div class="about-container">
                 <div class="about-text">
@@ -114,7 +126,6 @@
             </div>
         </section>
 
-        <!-- قسم اتصل بنا ونموذج التحقق (Contact Section) -->
         <section id="contact" class="contact-section">
             <h2 class="section-title">تواصل معنا بأمان</h2>
             <div class="contact-grid">
@@ -142,16 +153,20 @@
         </section>
     </main>
 
-    <!-- التذييل والروابط الاجتماعية المعدلة -->
     <footer>
         <div class="footer-content">
-            <!-- إضافة صورة الشعار المرفق -->
-            <img src="image_da4cad.jpg" alt="اتقان سوفت Logo" class="footer-logo">
+            <img src="image_da4cad.jpg" alt="اتقان سوفت" class="footer-logo">
             <p>&copy; 2026 جميع الحقوق محفوظة لدى اتقان سوفت.</p>
             <div class="social-links">
-                <a href="https://github.com/amralgrab25-png" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://www.facebook.com/share/p/1JZrLYDYto/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://github.com/amralgrab25-png" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://www.facebook.com/share/p/1JZrLYDYto/" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
             </div>
         </div>
     </footer>
